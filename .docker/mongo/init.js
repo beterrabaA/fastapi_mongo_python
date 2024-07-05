@@ -1,21 +1,21 @@
-db = db.getSiblingDB('sample_db');
+db = db.getSiblingDB('todo_db');
 
-db.createCollection('sample_collection');
+db.createCollection('tasks_collection');
 
 db.sample_collection.insertMany([
  {
-    org: 'helpdev',
-    filter: 'EVENT_A',
-    addrs: 'http://rest_client_1:8080/wh'
+    name: 'helpdev',
+    description: 'salada mista',
+    is_done: false
   },
   {
-    org: 'helpdev',
-    filter: 'EVENT_B',
-    addrs: 'http://rest_client_2:8081/wh'
+    name: 'helpdev',
+    description: 'quero quero',
+    is_done: false
   },
   {
-    org: 'github',
-    filter: 'EVENT_C',
-    addrs: 'http://rest_client_3:8082/wh'
+    name: 'helpdev',
+    description: 'passagem de onibus',
+    is_done: false
   }  
 ]);
