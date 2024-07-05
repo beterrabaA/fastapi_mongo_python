@@ -5,6 +5,6 @@ url = os.environ.get('DATABASE_URL')
 
 client = MongoClient(url)
 
-db = client.todo_db
+db = client['DATABASE_NAME']
 
-collection_name = db['collection_todo']
+collection_name = db['DATABASE_COLLECTION']
