@@ -13,3 +13,7 @@ async def get_todos():
     todos = list_serial(collection_name.find())
     return todos
 
+@todo_router.post('/')
+async def post_todo(todo: Todo):
+    collection_name.insert_one(dict(todo))
+    return JSONResponse(status_code=status.HTTP_201_CREATED,content={'message':'todo created'})
