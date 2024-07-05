@@ -21,3 +21,7 @@ async def post_todo(todo: Todo):
 @todo_router.put('/{id}')
 async def put_todo(id: str,todo: Todo):
     collection_name.find_one_and_update({'_id': ObjectId(id)},{'$set': dict(todo)})
+
+@todo_router.delete('/{id}')
+async def delete_todo(id: str):
+    collection_name.find_one_and_delete({'_id': ObjectId(id)})
