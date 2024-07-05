@@ -10,4 +10,4 @@ COPY ./src .
 
 EXPOSE 8080
 
-CMD ["uvicorn", "fastapi:app", "--host", "0.0.0.0", "--port", "8080"]
+CMD ["uvicorn", "main:app", "--port", "8080"]
